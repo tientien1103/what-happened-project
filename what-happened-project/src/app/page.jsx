@@ -162,9 +162,24 @@ export default function Home() {
 
       <section className="bg-[#fccb05] w-full pb-36">
         <Container className="relative">
+          <Image
+            className="absolute hidden xl:block top-12 right-0"
+            src="/issues/dice5.webp"
+            alt="dice5"
+            width={95}
+            height={95}
+          />
+          <Image
+            className="absolute hidden xl:block top-44 right-0"
+            src="/issues/dice3.webp"
+            alt="dice3"
+            width={119}
+            height={111}
+          />
+
           <div className="space-y-10 py-40 flex flex-col justify-center items-center">
             <h3 className="text-[#110e03] text-5xl text-center leading-[60px]">
-              Brand Story
+              Happened’s issue
             </h3>
             <p className="text-[#110e03] text-base text-center">
               모바일에 최적화된 비디오를 단 몇 분 만에 제작해보세요. 디자이너가

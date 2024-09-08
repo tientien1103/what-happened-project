@@ -6,9 +6,9 @@ function BestProductCard({ productImg, productIcon }) {
   return (
     <>
       <Image
-        className={clsx("2xl:block hidden absolute z-10 -top-12 left-0", {
-          "left-[520px]": productImg === "best-image-02",
-          "left-[1042px]": productImg === "best-image-03",
+        className={clsx("2xl:block hidden absolute z-10 -top-12 -left-10", {
+          "left-[490px]": productImg === "best-image-02",
+          "left-[1010px]": productImg === "best-image-03",
         })}
         src={`/best-products/${productIcon}.webp`}
         alt="best-product-img"
@@ -23,10 +23,10 @@ function BestProductCard({ productImg, productIcon }) {
       />
       <div
         className={clsx(
-          "hidden 2xl:flex -bottom-10 left-20 flex-row gap-10 justify-between py-3 px-6 absolute z-10 border-[3px] border-[#020001] bg-white",
+          "hidden 2xl:flex -bottom-10 left-12 flex-row gap-10 justify-between py-3 px-6 absolute z-10 border-[3px] border-[#020001] bg-white",
           {
-            "left-[605px]": productImg === "best-image-02",
-            "left-[1130px]": productImg === "best-image-03",
+            "left-[575px]": productImg === "best-image-02",
+            "left-[1100px]": productImg === "best-image-03",
           }
         )}
       >
