@@ -87,8 +87,8 @@ export default function Header() {
               })}
               loading="eager"
               priority
-              src={"/logo.webp"}
-              alt="the-oasis-logo"
+              src={"/logo@2x.webp"}
+              alt="what-happened-logo"
               width={150}
               height={28}
             />
