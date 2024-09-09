@@ -1,6 +1,6 @@
 import { PRODUCT_ARR } from "@/mockup/data";
 import React from "react";
-import ProductCard from "./product-card";
+import CardProduct from "../common/product-card";
 import Button from "../common/button";
 import Link from "next/link";
 
@@ -13,11 +13,11 @@ function ProductList() {
             key={product.imgUrl}
             className="col-span-15 lg:col-span-5 xl:col-span-3 mb-16"
           >
-            <ProductCard imgUrl={product.imgUrl} />
+            <CardProduct imgUrl={product.imgUrl} />
           </div>
         ))}
       </div>
-      <Link href="#" className="mt-14">
+      <Link href="/shop" className="mt-14">
         <Button />
       </Link>
     </div>
