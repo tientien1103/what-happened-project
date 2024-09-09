@@ -20,7 +20,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="relative w-full bg-[url(/introduction-bg.webp)] bg-cover bg-no-repeat">
+      <section className="relative w-full bg-[url(/introduction-banner.webp)] bg-cover bg-no-repeat">
         <Container>
           <div className="flex max-w-[676px] gap-14 flex-col items-start py-20 lg:py-44">
             <p className="text-5xl font-extrabold text-white">What Happened!</p>
