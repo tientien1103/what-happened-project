@@ -29,6 +29,7 @@ const tabs = [
 
 function SubHeader() {
   const currentPath = usePathname();
+  console.log(currentPath);
   return (
     <div className="flex flex-col gap-10">
       <div className="flex w-full items-center justify-center">

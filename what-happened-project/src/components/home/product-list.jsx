@@ -13,7 +13,7 @@ function ProductList() {
             key={product.imgUrl}
             className="col-span-15 lg:col-span-5 xl:col-span-3 mb-16"
           >
-            <CardProduct imgUrl={product.imgUrl} />
+            <CardProduct imgUrl={product.imgUrl} slug={product.slug} />
           </div>
         ))}
       </div>
