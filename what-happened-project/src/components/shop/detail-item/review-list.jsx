@@ -16,7 +16,7 @@ function ReviewList() {
     <div>
       {PRODUCT_ARR.slice(firstItemIndex, lastItemIndex).map((item, index) => (
         <div key={`review ${index + 1}`}>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-col lg:flex-row justify-start lg:justify-between">
             <ReviewCard imgUrl={item.imgUrl} />
           </div>
           <hr className="w-full border-[#ececec] my-6" />

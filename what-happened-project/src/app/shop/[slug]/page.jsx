@@ -39,7 +39,7 @@ function DetailItem() {
     <main className="min-h-screen bg-white">
       <section className="pt-44">
         <Container>
-          <div className="grid grid-cols-8 gap-36">
+          <div className="grid grid-cols-8 gap-20 lg:gap-36">
             <PhotoGallery />
             <ItemCard />
           </div>
@@ -149,78 +149,74 @@ function DetailItem() {
 
       <section className="pt-36">
         <Container>
-          <div>
-            <div className="flex flex-row justify-between">
-              <div className="flex gap-8">
-                <h3 className="text-2xl text-[#111] font-medium">
-                  review (16)
-                </h3>
-                <div className="flex gap-2">
-                  <Image
-                    src="/shop-page/orange-star.webp"
-                    alt="star"
-                    width={27}
-                    height={26}
-                    className="object-contain"
-                  />
-                  <Image
-                    src="/shop-page/orange-star.webp"
-                    alt="star"
-                    width={27}
-                    height={26}
-                    className="object-contain"
-                  />
-                  <Image
-                    src="/shop-page/orange-star.webp"
-                    alt="star"
-                    width={27}
-                    height={26}
-                    className="object-contain"
-                  />
-                  <Image
-                    src="/shop-page/orange-star.webp"
-                    alt="star"
-                    width={27}
-                    height={26}
-                    className="object-contain"
-                  />
-                  <Image
-                    src="/shop-page/grey-star.webp"
-                    alt="star"
-                    width={27}
-                    height={26}
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              <p className="ml-8 text-[#111] underline text-lg font-medium">
-                리뷰쓰기
-              </p>
-            </div>
-            <hr className="w-full border-[#111] mt-5" />
-            <div className="overflow-x-hidden">
-              <div
-                ref={ref}
-                onScroll={handleScroll}
-                className="snap-x snap-mandatory overflow-x-scroll scroll-smooth overscroll-x-contain whitespace-nowrap scrollbar-hide"
-              >
-                <div className="flex gap-4">
-                  {PRODUCT_ARR.map((item) => (
-                    <Image
-                      key={item.imgUrl}
-                      src={`/products/${item.imgUrl}.webp`}
-                      width={213.5}
-                      height={213.5}
-                      className="snap-start"
-                    />
-                  ))}
-                </div>
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-col md:flex-row sm:gap-4 lg:gap-8">
+              <h3 className="text-2xl text-[#111] font-medium">review (16)</h3>
+              <div className="flex gap-2">
+                <Image
+                  src="/shop-page/orange-star.webp"
+                  alt="star"
+                  width={27}
+                  height={26}
+                  className="object-contain"
+                />
+                <Image
+                  src="/shop-page/orange-star.webp"
+                  alt="star"
+                  width={27}
+                  height={26}
+                  className="object-contain"
+                />
+                <Image
+                  src="/shop-page/orange-star.webp"
+                  alt="star"
+                  width={27}
+                  height={26}
+                  className="object-contain"
+                />
+                <Image
+                  src="/shop-page/orange-star.webp"
+                  alt="star"
+                  width={27}
+                  height={26}
+                  className="object-contain"
+                />
+                <Image
+                  src="/shop-page/grey-star.webp"
+                  alt="star"
+                  width={27}
+                  height={26}
+                  className="object-contain"
+                />
               </div>
             </div>
-            <hr className="w-full border-[#ececec] mt-10 mb-5" />
-
-            <ReviewList />
+            <p className="ml-8 text-[#111] underline text-lg font-medium hidden md:block">
+              리뷰쓰기
+            </p>
           </div>
+          <hr className="w-full border-[#111] mt-5" />
+          <div className="overflow-x-hidden">
+            <div
+              ref={ref}
+              onScroll={handleScroll}
+              className="snap-x snap-mandatory overflow-x-scroll scroll-smooth overscroll-x-contain whitespace-nowrap scrollbar-hide"
+            >
+              <div className="flex gap-4">
+                {PRODUCT_ARR.map((item) => (
+                  <Image
+                    key={item.imgUrl}
+                    src={`/products/${item.imgUrl}.webp`}
+                    width={213.5}
+                    height={213.5}
+                    className="snap-start"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+          <hr className="w-full border-[#ececec] mt-10 mb-5" />
+
+          <ReviewList />
         </Container>
       </section>
 
