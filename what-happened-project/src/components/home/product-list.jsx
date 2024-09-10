@@ -1,8 +1,8 @@
 import { PRODUCT_ARR } from "@/mockup/data";
 import React from "react";
-import CardProduct from "../common/product-card";
 import Button from "../common/button";
 import Link from "next/link";
+import ProductCard from "../common/product-card";
 
 function ProductList() {
   return (
@@ -13,7 +13,7 @@ function ProductList() {
             key={product.imgUrl}
             className="col-span-15 lg:col-span-5 xl:col-span-3 mb-16"
           >
-            <CardProduct imgUrl={product.imgUrl} slug={product.slug} />
+            <ProductCard imgUrl={product.imgUrl} slug={product.slug} />
           </div>
         ))}
       </div>
