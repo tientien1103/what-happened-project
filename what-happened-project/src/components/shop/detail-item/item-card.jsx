@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function ItemCard() {
@@ -105,9 +106,13 @@ function ItemCard() {
         <button className="w-full lg:w-1/2 border-2 border-[#0565bb] bg-[#f8f8f8] text-[#0565bb] text-base font-medium py-6">
           add cart
         </button>
-        <button className="w-full lg:w-1/2 bg-[#0565bb] text-white text-base font-medium py-6">
+        <Link
+          href="/shopping-bag"
+          className="w-full lg:w-1/2 bg-[#0565bb] text-white text-base
+          font-medium py-6 text-center"
+        >
           buy now
-        </button>
+        </Link>
       </div>
     </div>
   );
