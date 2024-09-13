@@ -230,6 +230,53 @@ export default function LoginForm() {
           </div>
         )}
       </div>
+
+      <div className="space-y-2">
+        <div className="flex gap-3 justify-end">
+          <input
+            type="checkbox"
+            {...register("condition", {
+              required: "You need to read and accept the policy",
+            })}
+            className="w-3 h-3"
+          />
+          <p className="text-xs outline-none text-[#111111] self-center">
+            <Link href="/pravacy-and-policy" className="text-[#659bf5]">
+              이용약관
+            </Link>{" "}
+            및{" "}
+            <Link href="/pravacy-and-policy" className="text-[#659bf5]">
+              개인정보 처리 방침
+            </Link>
+            에 동의합니다. (필수)
+          </p>
+        </div>
+        {errors.condition && (
+          <div className="flex mt-2 self-end pl-3 gap-2">
+            <svg width="9" height="9" viewBox="0 0 12 12">
+              <path
+                fill="#EE6723"
+                fillRule="evenodd"
+                d="M6 3.898L2.317.215c-.282-.282-.759-.284-1.052.01l-1.04 1.04c-.298.298-.298.764-.01 1.052L3.898 6 .215 9.683c-.282.282-.284.759.01 1.052l1.04 1.04c.298.298.764.298 1.052.01L6 8.102l3.683 3.683c.282.282.759.284 1.052-.01l1.04-1.04c.298-.298.298-.764.01-1.052L8.102 6l3.683-3.683c.282-.282.284-.759-.01-1.052l-1.04-1.04c-.298-.298-.764-.298-1.052-.01L6 3.898z"
+              ></path>
+            </svg>
+            <span className="text-xs md:w-[454px] leading-none font-light text-red-500">
+              {errors.condition.message}
+            </span>
+          </div>
+        )}
+
+        <div className="flex gap-3 justify-end">
+          <input
+            type="checkbox"
+            {...register("sendEmail")}
+            className="w-3 h-3"
+          />
+          <p className="text-xs outline-none text-[#111111] self-center">
+            광고 및 메일 수신에 동의합니다. (선택)
+          </p>
+        </div>
+      </div>
       <input
         disabled={!isValid}
         type="submit"
