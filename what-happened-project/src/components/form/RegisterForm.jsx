@@ -232,6 +232,7 @@ export default function LoginForm() {
       </div>
 
       <div className="space-y-2">
+        <hr className="w-full md:w-[454px] h-4 mt-6 mb-3 border-[#222222]" />
         <div className="flex gap-3 justify-end">
           <input
             type="checkbox"
@@ -277,6 +278,7 @@ export default function LoginForm() {
           </p>
         </div>
       </div>
+
       <input
         disabled={!isValid}
         type="submit"
